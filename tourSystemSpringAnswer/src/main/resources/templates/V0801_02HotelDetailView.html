@@ -1,0 +1,81 @@
+<!--
+	ホテル登録確認画面（ID:）
+	All Right Reserved, Copyright(c) Fujitsu Learning Media Limited
+	version 1.0
+-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}">
+<LINK rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+<title>販売管理システム</title>
+</head>
+
+<body>
+<!-- ヘッダー -->
+<div th:insert="header::headermenu"></div>
+
+<!-- メインコンテンツ -->
+<!-- タイトル -->
+<div class="title">
+	<h2>ホテル商品詳細</h2>
+</div>
+
+<div class="right">
+	<div align="center">
+		<form  method="POST" th:object="${itemDetailForm}">
+			<input type="hidden" name="itemCode" th:filed="*{itemCode}" th:value="${hotel.itemCode}">
+			<table border=1 class="detail" >
+				<tr>
+					<td width="130px" class="colume">商品コード</td>
+					<td width=240 th:text="${hotel.itemCode}">HTL000183</td>
+				</tr>
+				<tr>
+					<td class="colume">ホテル名</td>
+					<td  th:text="${hotel.itemName}">札幌プリンセスホテル</td>
+				</tr>
+				<tr>
+					<td class="colume">宿泊日</td>
+					<td th:text="${hotel.date}">2022/07/02</td>
+				</tr>
+				<tr>
+					<td class="colume">都市名</td>
+					<td th:text="${hotel.cityName}">札幌</td>
+				</tr>
+				<tr>
+					<td class="colume">グレード</td>
+					<td th:text="${hotel.grade}">5</td>
+				</tr>
+				<tr>
+					<td class="colume">料金</td>
+					<td th:text="${hotel.price}">15,000</td>
+				</tr>
+				<tr>
+					<td class="colume">在庫数</td>
+					<td th:text="${hotel.stock}">15</td>
+				</tr>
+				<tr>
+					<td class="colume">数量</td>
+					<td><input name="quantity" type="text" th:filed="*{quantity}"></td>
+				</tr>
+			</table>
+
+			<br>
+			<!-- ボタン -->
+			<button th:formaction="@{/orderRegist/addShoppingCart}"  class="btn btn-secondary">カートに入れる</button>
+
+			<br><br>
+
+			<!-- メッセージ -->
+			<div id="message" align="center" style="color:#FF0000">
+			</div>
+		</form>
+	</div>
+</div>
+<!-- フッター -->
+<div th:insert="footer::footer"></div>
+<script src="/js/jquery-3.6.0.min.js" ></script>
+<script src="/js/bootstrap.bundle.min.js" ></script>
+</body>
+</html>

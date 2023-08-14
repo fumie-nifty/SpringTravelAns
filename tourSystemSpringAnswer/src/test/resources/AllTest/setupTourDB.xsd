@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="dataset">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="MemberNumbering" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute type="xs:integer" name="MemberCode"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Member" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute type="xs:string" name="MemberCode"/>
+            <xs:attribute type="xs:string" name="Name"/>
+            <xs:attribute type="xs:string" name="Password"/>
+            <xs:attribute type="xs:string" name="Role"/>
+            <xs:attribute type="xs:string" name="Mail"/>
+            <xs:attribute type="xs:string" name="ZipCode"/>
+            <xs:attribute type="xs:string" name="Prefecture"/>
+            <xs:attribute type="xs:string" name="Address"/>
+            <xs:attribute type="xs:string" name="Tel"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Destination" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute type="xs:string" name="DestinationCode"/>
+            <xs:attribute type="xs:string" name="Name"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="City" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute type="xs:string" name="CityCode"/>
+            <xs:attribute type="xs:string" name="Name"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Airport" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute type="xs:string" name="AirportCode"/>
+            <xs:attribute type="xs:string" name="Name"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Category" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute type="xs:integer" name="CategoryNo"/>
+            <xs:attribute type="xs:string" name="CategoryCode"/>
+             <xs:attribute type="xs:string" name="CategoryName"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OrderMaster" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute type="xs:integer" name="OrderNo"/>
+            <xs:attribute type="xs:string" name="OrderDate"/>
+            <xs:attribute type="xs:integer" name="OrderTotal"/>
+            <xs:attribute type="xs:string" name="MemberCode"/>
+            <xs:attribute type="xs:string" name="Payment"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OrderDetail" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute type="xs:integer" name="OrderNo"/>
+            <xs:attribute type="xs:string" name="ItemCode"/>
+            <xs:attribute type="xs:string" name="ItemName"/>
+            <xs:attribute type="xs:integer" name="Price"/>
+            <xs:attribute type="xs:integer" name="Quantity"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TourMaster" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute type="xs:string" name="TourCode"/>
+            <xs:attribute type="xs:string" name="Name"/>
+            <xs:attribute type="xs:string" name="DestinationCode"/>
+            <xs:attribute type="xs:integer" name="Days"/>
+            <xs:attribute type="xs:integer" name="Nights"/>
+            <xs:attribute type="xs:integer" name="BasicPrice"/>
+            <xs:attribute type="xs:string" name="HotelCode"/>
+            <xs:attribute type="xs:string" name="OutwardFlightCode"/>
+            <xs:attribute type="xs:string" name="HomewardFlightCode"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Tour" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute type="xs:string" name="ItemCode"/>
+            <xs:attribute type="xs:string" name="TourCode"/>
+            <xs:attribute type="xs:string" name="Date"/>
+            <xs:attribute type="xs:integer" name="Price"/>
+            <xs:attribute type="xs:string" name="FirstHotelItemCode"/>
+            <xs:attribute type="xs:string" name="OutwardFlightItemCode"/>
+            <xs:attribute type="xs:string" name="HomewardFlightItemCode"/>
+            <xs:attribute type="xs:integer" name="Stock"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FlightMaster" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute type="xs:string" name="FlightCode"/>
+            <xs:attribute type="xs:string" name="DepartureTime"/>
+            <xs:attribute type="xs:string" name="ArrivalTime"/>
+            <xs:attribute type="xs:string" name="DepartureAirportCode"/>
+            <xs:attribute type="xs:string" name="ArrivalAirportCode"/>
+            <xs:attribute type="xs:integer" name="BasicPrice"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Flight" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute type="xs:string" name="ItemCode"/>
+            <xs:attribute type="xs:string" name="FlightCode"/>
+            <xs:attribute type="xs:string" name="Date"/>
+            <xs:attribute type="xs:integer" name="Price"/>
+            <xs:attribute type="xs:integer" name="Stock"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="HotelMaster" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute type="xs:string" name="HotelCode"/>
+            <xs:attribute type="xs:string" name="Name"/>
+            <xs:attribute type="xs:string" name="CityCode"/>
+            <xs:attribute type="xs:string" name="Grade"/>
+            <xs:attribute type="xs:integer" name="BasicPrice"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Hotel" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute type="xs:string" name="ItemCode"/>
+            <xs:attribute type="xs:string" name="HotelCode"/>
+            <xs:attribute type="xs:string" name="Date"/>
+            <xs:attribute type="xs:integer" name="Price"/>
+            <xs:attribute type="xs:integer" name="Stock"/>
+          </xs:complexType>
+        </xs:element>
+       </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

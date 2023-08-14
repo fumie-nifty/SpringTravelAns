@@ -1,0 +1,127 @@
+<!--
+	ホテル商品検索画面（ID:）
+	All Right Reserved, Copyright(c) Fujitsu Learning Media Limited
+	version 1.0
+-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}">
+<LINK rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+<title>販売管理システム</title>
+</head>
+
+<body>
+<!-- ヘッダー -->
+<div th:insert="header::headermenu"></div>
+
+<!-- メインコンテンツ -->
+<!-- タイトル -->
+<div class="title">
+	<h2>ホテル商品検索</h2>
+</div>
+
+<div class="right">
+	<div align="center" style="border: 1px solid #000000">
+		<form  method="POST" th:object="${searchHotelForm}">
+
+			<table  style="margin:5px">
+				<tr>
+					<td>宿泊年月</td>
+					<td width=160>
+						　<input	type="text" name="year"
+										th:filed="*{year}"
+						 				th:value="*{year}" maxlength="4" style="width: 60px"> 年
+						 <select name="month" th:filed="*{month}" style="width: 40px">
+								<option  value="1">1</option>
+								<option  value="2">2</option>
+								<option  value="3">3</option>
+								<option  value="4">4</option>
+								<option  value="5">5</option>
+								<option  value="6">6</option>
+								<option  value="7">7</option>
+								<option  value="8">8</option>
+								<option  value="9">9</option>
+								<option  value="10">10</option>
+								<option  value="11">11</option>
+								<option  value="12">12</option>
+						</select>
+						月
+					</td>
+				</tr>
+				<tr>
+					<td>都市名</td>
+					<td width=160>
+						　<select name="cityCode" th:filed="*{cityCode}" style="width: 140px">
+								<option  value="01">札幌</option>
+								<option  value="02">旭川</option>
+								<option  value="03">函館</option>
+								<option  value="04">福岡</option>
+								<option  value="05">鹿児島</option>
+								<option  value="06">那覇</option>
+						</select>
+					</td>
+					<td>
+						　<button th:formaction="@{/hotelSearch/searchHotelList}"   class="btn btn-secondary">検索</button>
+					</td>
+				</tr>
+			</table>
+			<!-- メッセージ -->
+			<div id="message" align="center" style="color:#FF0000">
+
+			</div>
+	</form>
+</div>
+</div>
+<div class="right">
+		<div align=center>
+			<div align=left class="list2">
+				<table border=1>
+					<tr>
+						<td width="110" class="colume">宿泊年月</td>
+						<td width="110" th:text="${searchHotelForm.date}">2022</td>
+						<td width="110" class="colume">都市名</td>
+						<td width="110" th:text="${searchHotelForm.cityName}">北海道</td>
+					</tr>
+				</table>
+			</div>
+
+			<br>
+
+			<div  align=left>
+				<table border=1 style="width:100%">
+					<tr>
+						<th style="width:20%" class="colume">商品コード</th>
+						<th style="width:50%" class="colume">ホテル名</th>
+						<th style="width:15%" class="colume">宿泊日</th>
+						<th style="width:15%" class="colume">料金</th>
+					</tr>
+					<th:block th:object="${hotel}" th:each="hotel : ${hotelList}">
+	 					<tr>
+							<td>
+								<a th:href="@{'/hotelSearch/searchHotel/' + ${hotel.itemCode}}"  th:text="*{itemCode}">
+									商品コード
+								</a>
+							</td>
+							<td th:text="*{itemName}">ホテル名</td>
+							<td th:text="*{date}">宿泊日</td>
+							<td  th:text="${#numbers.formatInteger(hotel.price, 1, 'COMMA')}" align="right">価格</td>
+						</tr>
+					</th:block>
+ 				</table>
+			</div>
+
+			<br>
+		</div>
+		<!-- メッセージ -->
+		<div id="message" align="center" style="color:#FF0000">
+		</div>
+</div>
+
+<!-- フッター -->
+<div th:insert="footer::footer"></div>
+<script src="/js/jquery-3.6.0.min.js" ></script>
+<script src="/js/bootstrap.bundle.min.js" ></script>
+</body>
+</html>

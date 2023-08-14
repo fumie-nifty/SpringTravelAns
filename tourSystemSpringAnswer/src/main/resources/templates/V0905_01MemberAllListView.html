@@ -1,0 +1,71 @@
+<!--
+	メンバー一覧画面（ID:）
+	All Right Reserved, Copyright(c) Fujitsu Learning Media Limited
+	version 1.0
+-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<LINK rel="stylesheet" type="text/css" href="css/Style.css">
+<title>販売管理システム</title>
+</head>
+
+<body>
+
+<jsp:include page="/head.jsp" flush="true"/>
+
+<div class="title">
+	<h2>メンバー一覧</h2>
+</div>
+
+<div class="right">
+	<form action="/tourSystemans/tsys" method="POST" name="inputFom">
+		<!-- 次画面ID用フィールド -->
+		<input type="hidden" name="BUTTON_ID" value="0">
+		<div align=center>
+			<table border=1 cellspacing="0" cellpadding="2px" class="list">
+				<tr>
+					<th width="110" class="colume">メンバーコード</th>
+					<th width="110" class="colume">メンバー名</th>
+					<th width="90" class="colume">郵便番号</th>
+					<th width="210" class="colume">住所</th>
+					<th width="110" class="colume">電話番号</th>
+					<th width="110" class="colume">メールアドレス</th>
+				</tr>
+			<c:forEach var="mem"
+				items="${requestScope.memberList}" varStatus="status">
+ 				<tr>
+					<td><c:out value="${mem.memberCode}"/></td>
+					<td><c:out value="${mem.memberName}"/></td>
+					<td><c:out value="${mem.zipCode}　"/></td>
+					<td><c:out value="${mem.prefecture}　"/><c:out value="${mem.address}"/></td>
+					<td><c:out value="${mem.tel}"/>　</td>
+					<td><c:out value="${mem.mail}"/></td>
+				</tr>
+			</c:forEach>
+			</table>
+		</div>
+
+		<br>
+
+		<!-- メッセージ -->
+		<div id="message" align="center" style="color:#FF0000">
+			<c:out value="${requestScope.message }" escapeXml="false"/>
+		</div>
+
+		<div align="right">
+			<!-- ボタン -->
+			<c:if test="${sessionScope.member.role=='Employee' }">
+				<input type="button" name="cmdSubmit" value="メンバー管理メニュー" class="cmdbutton3"
+						onClick="this.form.BUTTON_ID.value='M02_01'; this.form.submit()">
+			</c:if>
+		</div>
+	</form>
+</div>
+
+<jsp:include page="/foot.jsp" flush="true"/>
+
+</body>
+</html>

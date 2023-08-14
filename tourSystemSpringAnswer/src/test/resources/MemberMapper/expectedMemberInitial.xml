@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dataset>
+	<Member MemberCode="000543210" Name="古田誠" Password="pwd" Role="Employee" Mail="furuta.makoto@flmtours.co.jp"/>
+	<Member MemberCode="000543211" Name="大島義彦" Password="pwd" Role="Employee" Mail="ooshima.yoshihiko@flmtours.co.jp"/>
+	<Member MemberCode="000543212" Name="高岡紫" Password="pwd" Role="Employee" Mail="takaoka.murasaki@flmtours.co.jp"/>
+	<Member MemberCode="000543213" Name="窓辺あかり" Password="pwd" Role="Employee" Mail="akari.madobe@flmtours.co.jp"/>
+	<Member MemberCode="000543214" Name="宮田隆一" Password="pwd" Role="Employee" Mail="miyata@flmtours.co.jp"/>
+	<Member MemberCode="CM0000001" Name="佐藤ハナコ" Password="pass" Role="Customer" Mail="hanako@aaa.com" ZipCode="108-6112" Prefecture="東京都" Address="港区港南" Tel="03-3333-1234"/>
+	<Member MemberCode="CM0000002" Name="鈴木イチロウ" Password="pass" Role="Customer" Mail="1low@mephone.org" ZipCode="108-6112" Prefecture="東京都" Address="港区港南" Tel="03-3334-4455"/>
+	<Member MemberCode="CM0000003" Name="加藤清志" Password="pass" Role="Customer" Mail="kato.kiyoshi@aaa.ne.jp" ZipCode="168-0082" Prefecture="東京都" Address="杉並区久我山" Tel="03-9876-5432"/>
+	<Member MemberCode="CM0000004" Name="鈴木和人" Password="pass" Role="Customer" Mail="suzuki.kazu@mephone.org" ZipCode="170-0011" Prefecture="東京都" Address="豊島区池袋" Tel="03-1111-2222"/>
+	<Member MemberCode="CM0000005" Name="高橋亜紀" Password="pass" Role="Customer" Mail="takaaki@aaa.com" ZipCode="146-0083" Prefecture="東京都" Address="大田区千鳥" Tel="090-1111-2222"/>
+	<Member MemberCode="CM0000006" Name="田中咲子" Password="pass" Role="Customer" Mail="sakiko@aabbcc.co.jp" ZipCode="350-1100" Prefecture="埼玉県" Address="川越市" Tel="090-4444-5555"/>
+	<Member MemberCode="CM0000007" Name="渡辺純也" Password="pass" Role="Customer" Mail="jwatanabe@aaa.ne.jp" ZipCode="142-0041" Prefecture="東京都" Address="品川区戸越" Tel="070-1111-2222"/>
+	<Member MemberCode="CM0000008" Name="伊藤正道" Password="pass" Role="Customer" Mail="itomasa@abcde.ne.jp" ZipCode="178-0062" Prefecture="東京都" Address="練馬区大泉町" Tel="080-3333-9999"/>
+	<Member MemberCode="CM0000009" Name="中村健二" Password="pass" Role="Customer" Mail="nakamu@mephone.org" ZipCode="158-0097" Prefecture="東京都" Address="世田谷区用賀" Tel="03-4321-8765"/>
+	<Member MemberCode="CM0000010" Name="小林郁子" Password="pass" Role="Customer" Mail="kobapan@aaa.com" ZipCode="225-0011" Prefecture="神奈川県" Address="横浜市青葉区あざみ野" Tel="045-123-456"/>
+	<Member MemberCode="CM0000011" Name="斉藤学" Password="pass" Role="Customer" Mail="sightow@aaabbbccc.ne.jp" ZipCode="216-0004" Prefecture="神奈川県" Address="川崎市宮前区鷺沼" Tel="070-9876-5432"/>
+</dataset>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dataset>
+	<MemberNumbering MemberCode="11"/>
+	<Member MemberCode="000543210" Name="古田誠" Password="pwd" Role="Employee" Mail="furuta.makoto@flmtours.co.jp"/>
+	<Member MemberCode="000543211" Name="大島義彦" Password="pwd" Role="Employee" Mail="ooshima.yoshihiko@flmtours.co.jp"/>
+	<Member MemberCode="000543212" Name="高岡紫" Password="pwd" Role="Employee" Mail="takaoka.murasaki@flmtours.co.jp"/>
+	<Member MemberCode="000543213" Name="窓辺あかり" Password="pwd" Role="Employee" Mail="akari.madobe@flmtours.co.jp"/>
+	<Member MemberCode="000543214" Name="宮田隆一" Password="pwd" Role="Employee" Mail="miyata@flmtours.co.jp"/>
+	<Member MemberCode="CM0000001" Name="佐藤ハナコ" Password="pass" Role="Customer" Mail="hanako@aaa.com" ZipCode="108-6112" Prefecture="東京都" Address="港区港南" Tel="03-3333-1234"/>
+	<Member MemberCode="CM0000002" Name="鈴木イチロウ" Password="pass" Role="Customer" Mail="1low@mephone.org" ZipCode="108-6112" Prefecture="東京都" Address="港区港南" Tel="03-3334-4455"/>
+	<Member MemberCode="CM0000003" Name="加藤清志" Password="pass" Role="Customer" Mail="kato.kiyoshi@aaa.ne.jp" ZipCode="168-0082" Prefecture="東京都" Address="杉並区久我山" Tel="03-9876-5432"/>
+	<Member MemberCode="CM0000004" Name="鈴木和人" Password="pass" Role="Customer" Mail="suzuki.kazu@mephone.org" ZipCode="170-0011" Prefecture="東京都" Address="豊島区池袋" Tel="03-1111-2222"/>
+	<Member MemberCode="CM0000005" Name="高橋亜紀" Password="pass" Role="Customer" Mail="takaaki@aaa.com" ZipCode="146-0083" Prefecture="東京都" Address="大田区千鳥" Tel="090-1111-2222"/>
+	<Member MemberCode="CM0000006" Name="田中咲子" Password="pass" Role="Customer" Mail="sakiko@aabbcc.co.jp" ZipCode="350-1100" Prefecture="埼玉県" Address="川越市" Tel="090-4444-5555"/>
+	<Member MemberCode="CM0000007" Name="渡辺純也" Password="pass" Role="Customer" Mail="jwatanabe@aaa.ne.jp" ZipCode="142-0041" Prefecture="東京都" Address="品川区戸越" Tel="070-1111-2222"/>
+	<Member MemberCode="CM0000008" Name="伊藤正道" Password="pass" Role="Customer" Mail="itomasa@abcde.ne.jp" ZipCode="178-0062" Prefecture="東京都" Address="練馬区大泉町" Tel="080-3333-9999"/>
+	<Member MemberCode="CM0000009" Name="中村健二" Password="pass" Role="Customer" Mail="nakamu@mephone.org" ZipCode="158-0097" Prefecture="東京都" Address="世田谷区用賀" Tel="03-4321-8765"/>
+	<Member MemberCode="CM0000010" Name="小林郁子" Password="pass" Role="Customer" Mail="kobapan@aaa.com" ZipCode="225-0011" Prefecture="神奈川県" Address="横浜市青葉区あざみ野" Tel="045-123-456"/>
+	<Member MemberCode="CM0000011" Name="斉藤学" Password="pass" Role="Customer" Mail="sightow@aaabbbccc.ne.jp" ZipCode="216-0004" Prefecture="神奈川県" Address="川崎市宮前区鷺沼" Tel="070-9876-5432"/>
+	<Destination DestinationCode="01" Name="北海道"/>
+	<Destination DestinationCode="02" Name="東北"/>
+	<Destination DestinationCode="03" Name="関東"/>
+	<Destination DestinationCode="04" Name="中部"/>
+	<Destination DestinationCode="05" Name="近畿"/>
+	<Destination DestinationCode="06" Name="四国"/>
+	<Destination DestinationCode="07" Name="九州"/>
+	<Destination DestinationCode="08" Name="沖縄"/>
+	<City CityCode="01" Name="札幌"/>
+	<City CityCode="02" Name="旭川"/>
+	<City CityCode="03" Name="函館"/>
+	<City CityCode="04" Name="福岡"/>
+	<City CityCode="05" Name="鹿児島"/>
+	<City CityCode="06" Name="那覇"/>
+	<Airport AirportCode="AKJ" Name="旭川空港"/>
+	<Airport AirportCode="CTS" Name="新千歳空港"/>
+	<Airport AirportCode="FUK" Name="福岡空港"/>
+	<Airport AirportCode="HKD" Name="函館空港"/>
+	<Airport AirportCode="HND" Name="羽田空港"/>
+	<Airport AirportCode="KOJ" Name="鹿児島空港"/>
+	<Airport AirportCode="OKA" Name="那覇空港"/>
+	<Airport AirportCode="SHM" Name="南紀白浜空"/>
+	<Category CategoryNo="1" CategoryCode="HTL" CategoryName="ホテル"/>
+	<Category CategoryNo="2" CategoryCode="TOR" CategoryName="ツアー"/>
+	<Category CategoryNo="3" CategoryCode="FLY" CategoryName="航空便"/>
+	<OrderMaster OrderNo="1" OrderDate="2022-01-01" OrderTotal="331600" MemberCode="CM0000001" Payment="1"/>
+	<OrderMaster OrderNo="2" OrderDate="2022-01-02" OrderTotal="150000" MemberCode="CM0000002" Payment="1"/>
+	<OrderMaster OrderNo="3" OrderDate="2022-01-03" OrderTotal="130000" MemberCode="CM0000003" Payment="1"/>
+	<OrderMaster OrderNo="4" OrderDate="2022-01-04" OrderTotal="331600" MemberCode="CM0000004" Payment="1"/>
+	<OrderMaster OrderNo="5" OrderDate="2022-01-05" OrderTotal="150000" MemberCode="CM0000005" Payment="1"/>
+	<OrderMaster OrderNo="6" OrderDate="2022-02-01" OrderTotal="130000" MemberCode="CM0000001" Payment="1"/>
+	<OrderMaster OrderNo="7" OrderDate="2022-02-02" OrderTotal="331600" MemberCode="CM0000002" Payment="1"/>
+	<OrderMaster OrderNo="8" OrderDate="2022-02-03" OrderTotal="130000" MemberCode="CM0000003" Payment="1"/>
+	<OrderMaster OrderNo="9" OrderDate="2022-02-04" OrderTotal="130000" MemberCode="CM0000004" Payment="1"/>
+	<OrderMaster OrderNo="10" OrderDate="2022-02-05" OrderTotal="130000" MemberCode="CM0000005" Payment="1"/>
+	<OrderMaster OrderNo="11" OrderDate="2022-03-01" OrderTotal="130000" MemberCode="CM0000001" Payment="1"/>
+	<OrderMaster OrderNo="12" OrderDate="2022-03-02" OrderTotal="130000" MemberCode="CM0000002" Payment="1"/>
+	<OrderMaster OrderNo="13" OrderDate="2022-03-03" OrderTotal="304400" MemberCode="CM0000003" Payment="1"/>
+	<OrderMaster OrderNo="14" OrderDate="2022-03-04" OrderTotal="304400" MemberCode="CM0000004" Payment="1"/>
+	<OrderMaster OrderNo="15" OrderDate="2022-03-05" OrderTotal="304400" MemberCode="CM0000005" Payment="1"/>
+	<OrderDetail OrderNo="1" ItemCode="TOR000001" ItemName="博多グルメ食べつくしツアー" Price="25000" Quantity="2"/>
+	<OrderDetail OrderNo="1" ItemCode="TOR000002" ItemName="博多フリープラン2泊3日の旅" Price="23000" Quantity="2"/>
+	<OrderDetail OrderNo="1" ItemCode="TOR000003" ItemName="イイ旅九州5つ星ホテルの旅" Price="65000" Quantity="2"/>
+	<OrderDetail OrderNo="1" ItemCode="TOR000004" ItemName="福岡 温泉でほっこりプラン" Price="27800" Quantity="2"/>
+	<OrderDetail OrderNo="1" ItemCode="TOR000005" ItemName="博多ロマンティックツアー" Price="25000" Quantity="2"/>
+	<OrderDetail OrderNo="2" ItemCode="HTL000041" ItemName="福岡プリンセスホテル" Price="15000" Quantity="2"/>
+	<OrderDetail OrderNo="2" ItemCode="HTL000042" ItemName="福岡プリンセスホテル" Price="15000" Quantity="2"/>
+	<OrderDetail OrderNo="2" ItemCode="HTL000043" ItemName="福岡プリンセスホテル" Price="15000" Quantity="2"/>
+	<OrderDetail OrderNo="2" ItemCode="HTL000044" ItemName="福岡プリンセスホテル" Price="15000" Quantity="2"/>
+	<OrderDetail OrderNo="2" ItemCode="HTL000045" ItemName="福岡プリンセスホテル" Price="15000" Quantity="2"/>
+	<OrderDetail OrderNo="3" ItemCode="FLY000001" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="3" ItemCode="FLY000002" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="3" ItemCode="FLY000003" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="3" ItemCode="FLY000004" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="3" ItemCode="FLY000005" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="4" ItemCode="TOR000001" ItemName="博多グルメ食べつくしツアー" Price="25000" Quantity="2"/>
+	<OrderDetail OrderNo="4" ItemCode="TOR000002" ItemName="博多フリープラン2泊3日の旅" Price="23000" Quantity="2"/>
+	<OrderDetail OrderNo="4" ItemCode="TOR000003" ItemName="イイ旅九州5つ星ホテルの旅" Price="65000" Quantity="2"/>
+	<OrderDetail OrderNo="4" ItemCode="TOR000004" ItemName="福岡 温泉でほっこりプラン" Price="27800" Quantity="2"/>
+	<OrderDetail OrderNo="4" ItemCode="TOR000005" ItemName="博多ロマンティックツアー" Price="25000" Quantity="2"/>
+	<OrderDetail OrderNo="5" ItemCode="HTL000041" ItemName="福岡プリンセスホテル" Price="15000" Quantity="2"/>
+	<OrderDetail OrderNo="5" ItemCode="HTL000042" ItemName="福岡プリンセスホテル" Price="15000" Quantity="2"/>
+	<OrderDetail OrderNo="5" ItemCode="HTL000043" ItemName="福岡プリンセスホテル" Price="15000" Quantity="2"/>
+	<OrderDetail OrderNo="5" ItemCode="HTL000044" ItemName="福岡プリンセスホテル" Price="15000" Quantity="2"/>
+	<OrderDetail OrderNo="5" ItemCode="HTL000045" ItemName="福岡プリンセスホテル" Price="15000" Quantity="2"/>
+	<OrderDetail OrderNo="6" ItemCode="FLY000001" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="6" ItemCode="FLY000002" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="6" ItemCode="FLY000003" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="6" ItemCode="FLY000004" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="6" ItemCode="FLY000005" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="7" ItemCode="TOR000001" ItemName="博多グルメ食べつくしツアー" Price="25000" Quantity="2"/>
+	<OrderDetail OrderNo="7" ItemCode="TOR000002" ItemName="博多フリープラン2泊3日の旅" Price="23000" Quantity="2"/>
+	<OrderDetail OrderNo="7" ItemCode="TOR000003" ItemName="イイ旅九州5つ星ホテルの旅" Price="65000" Quantity="2"/>
+	<OrderDetail OrderNo="7" ItemCode="TOR000004" ItemName="福岡 温泉でほっこりプラン" Price="27800" Quantity="2"/>
+	<OrderDetail OrderNo="7" ItemCode="TOR000005" ItemName="博多ロマンティックツアー" Price="25000" Quantity="2"/>
+	<OrderDetail OrderNo="8" ItemCode="FLY000001" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="8" ItemCode="FLY000002" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="8" ItemCode="FLY000003" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="8" ItemCode="FLY000004" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="8" ItemCode="FLY000005" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="9" ItemCode="FLY000001" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="9" ItemCode="FLY000002" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="9" ItemCode="FLY000003" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="9" ItemCode="FLY000004" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="9" ItemCode="FLY000005" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="10" ItemCode="FLY000001" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="10" ItemCode="FLY000002" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="10" ItemCode="FLY000003" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="10" ItemCode="FLY000004" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="10" ItemCode="FLY000005" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="11" ItemCode="FLY000001" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="11" ItemCode="FLY000002" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="11" ItemCode="FLY000003" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="11" ItemCode="FLY000004" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="11" ItemCode="FLY000005" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="12" ItemCode="FLY000001" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="12" ItemCode="FLY000002" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="12" ItemCode="FLY000003" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="12" ItemCode="FLY000004" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="12" ItemCode="FLY000005" ItemName="ADO013" Price="13000" Quantity="2"/>
+	<OrderDetail OrderNo="13" ItemCode="TOR000010" ItemName="博多グルメ食べつくしツアー" Price="25000" Quantity="2"/>
+	<OrderDetail OrderNo="13" ItemCode="TOR000011" ItemName="博多フリープラン2泊3日の旅" Price="23000" Quantity="2"/>
+	<OrderDetail OrderNo="13" ItemCode="TOR000012" ItemName="イイ旅九州5つ星ホテルの旅" Price="65000" Quantity="2"/>
+	<OrderDetail OrderNo="13" ItemCode="TOR000013" ItemName="博多出張応援パック" Price="18200" Quantity="2"/>
+	<OrderDetail OrderNo="13" ItemCode="TOR000014" ItemName="お部屋限定バリュープライス博多の旅" Price="21000" Quantity="2"/>
+	<OrderDetail OrderNo="14" ItemCode="TOR000010" ItemName="博多グルメ食べつくしツアー" Price="25000" Quantity="2"/>
+	<OrderDetail OrderNo="14" ItemCode="TOR000011" ItemName="博多フリープラン2泊3日の旅" Price="23000" Quantity="2"/>
+	<OrderDetail OrderNo="14" ItemCode="TOR000012" ItemName="イイ旅九州5つ星ホテルの旅" Price="65000" Quantity="2"/>
+	<OrderDetail OrderNo="14" ItemCode="TOR000013" ItemName="博多出張応援パック" Price="18200" Quantity="2"/>
+	<OrderDetail OrderNo="14" ItemCode="TOR000014" ItemName="お部屋限定バリュープライス博多の旅" Price="21000" Quantity="2"/>
+	<OrderDetail OrderNo="15" ItemCode="TOR000010" ItemName="博多グルメ食べつくしツアー" Price="25000" Quantity="2"/>
+	<OrderDetail OrderNo="15" ItemCode="TOR000011" ItemName="博多フリープラン2泊3日の旅" Price="23000" Quantity="2"/>
+	<OrderDetail OrderNo="15" ItemCode="TOR000012" ItemName="イイ旅九州5つ星ホテルの旅" Price="65000" Quantity="2"/>
+	<OrderDetail OrderNo="15" ItemCode="TOR000013" ItemName="博多出張応援パック" Price="18200" Quantity="2"/>
+	<OrderDetail OrderNo="15" ItemCode="TOR000014" ItemName="お部屋限定バリュープライス博多の旅" Price="21000" Quantity="2"/>
+	<TourMaster TourCode="000001" Name="イイ旅沖縄5つ星ホテルの旅" DestinationCode="08" Days="4" Nights="3" BasicPrice="73800" HotelCode="OKN001" OutwardFlightCode="JAL903" HomewardFlightCode="JAL916"/>
+	<TourMaster TourCode="000002" Name="イイ旅九州5つ星ホテルの旅" DestinationCode="07" Days="4" Nights="3" BasicPrice="65000" HotelCode="FKO001" OutwardFlightCode="JAL305" HomewardFlightCode="JAL332"/>
+	<Tour ItemCode="TOR000019" TourCode="000002" Date="2022-05-03" Price="65000" FirstHotelItemCode="HTL000123" OutwardFlightItemCode="FLY000357" HomewardFlightItemCode="FLY000387" Stock="8"/>
+	<Tour ItemCode="TOR000025" TourCode="000002" Date="2022-06-01" Price="65000" FirstHotelItemCode="HTL000152" OutwardFlightItemCode="FLY000358" HomewardFlightItemCode="FLY000388" Stock="8"/>
+	<Tour ItemCode="TOR000027" TourCode="000002" Date="2022-07-02" Price="65000" FirstHotelItemCode="HTL000183" OutwardFlightItemCode="FLY000359" HomewardFlightItemCode="FLY000389" Stock="8"/>
+	<Tour ItemCode="TOR000030" TourCode="000002" Date="2022-08-03" Price="65000" FirstHotelItemCode="HTL000215" OutwardFlightItemCode="FLY000360" HomewardFlightItemCode="FLY000390" Stock="8"/>
+	<FlightMaster FlightCode="JAL305" DepartureTime="08:10:00" ArrivalTime="10:10:00" DepartureAirportCode="HND" ArrivalAirportCode="FUK" BasicPrice="13000"/>
+	<FlightMaster FlightCode="JAL322" DepartureTime="16:00:00" ArrivalTime="17:30:00" DepartureAirportCode="FUK" ArrivalAirportCode="HND" BasicPrice="13000"/>
+	<FlightMaster FlightCode="JAL324" DepartureTime="17:00:00" ArrivalTime="18:30:00" DepartureAirportCode="FUK" ArrivalAirportCode="HND" BasicPrice="13000"/>
+	<FlightMaster FlightCode="JAL332" DepartureTime="20:00:00" ArrivalTime="21:30:00" DepartureAirportCode="FUK" ArrivalAirportCode="HND" BasicPrice="13000"/>
+	<Flight ItemCode="FLY000357" FlightCode="JAL305" Date="2022-05-03" Price="13000" Stock="15"/>
+	<Flight ItemCode="FLY000358" FlightCode="JAL305" Date="2022-06-01" Price="13000" Stock="15"/>
+	<Flight ItemCode="FLY000359" FlightCode="JAL305" Date="2022-07-02" Price="13000" Stock="15"/>
+	<Flight ItemCode="FLY000360" FlightCode="JAL305" Date="2022-08-03" Price="13000" Stock="15"/>
+	<Flight ItemCode="FLY000387" FlightCode="JAL332" Date="2022-05-06" Price="13000" Stock="15"/>
+	<Flight ItemCode="FLY000388" FlightCode="JAL332" Date="2022-06-04" Price="13000" Stock="15"/>
+	<Flight ItemCode="FLY000389" FlightCode="JAL332" Date="2022-07-05" Price="13000" Stock="15"/>
+	<Flight ItemCode="FLY000390" FlightCode="JAL332" Date="2022-08-06" Price="13000" Stock="15"/>
+	<HotelMaster HotelCode="FKO001" Name="福岡プリンセスホテル" CityCode="04" Grade="5" BasicPrice="15000"/>
+	<HotelMaster HotelCode="HKD001" Name="札幌プリンセスホテル" CityCode="01" Grade="5" BasicPrice="15000"/>
+	<Hotel ItemCode="HTL000110" HotelCode="FKO001" Date="2022-04-20" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000111" HotelCode="HKD001" Date="2022-04-21" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000112" HotelCode="FKO001" Date="2022-04-22" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000113" HotelCode="HKD001" Date="2022-04-23" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000114" HotelCode="FKO001" Date="2022-04-24" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000115" HotelCode="HKD001" Date="2022-04-25" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000116" HotelCode="FKO001" Date="2022-04-26" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000117" HotelCode="HKD001" Date="2022-04-27" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000118" HotelCode="FKO001" Date="2022-04-28" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000119" HotelCode="HKD001" Date="2022-04-29" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000120" HotelCode="FKO001" Date="2022-04-30" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000121" HotelCode="HKD001" Date="2022-05-01" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000122" HotelCode="FKO001" Date="2022-05-02" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000123" HotelCode="HKD001" Date="2022-05-03" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000124" HotelCode="FKO001" Date="2022-05-04" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000125" HotelCode="HKD001" Date="2022-05-05" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000126" HotelCode="FKO001" Date="2022-05-06" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000127" HotelCode="HKD001" Date="2022-05-07" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000128" HotelCode="FKO001" Date="2022-05-08" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000129" HotelCode="HKD001" Date="2022-05-09" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000130" HotelCode="FKO001" Date="2022-05-10" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000131" HotelCode="HKD001" Date="2022-05-11" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000132" HotelCode="FKO001" Date="2022-05-12" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000133" HotelCode="HKD001" Date="2022-05-13" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000134" HotelCode="FKO001" Date="2022-05-14" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000135" HotelCode="HKD001" Date="2022-05-15" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000136" HotelCode="FKO001" Date="2022-05-16" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000137" HotelCode="HKD001" Date="2022-05-17" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000138" HotelCode="FKO001" Date="2022-05-18" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000139" HotelCode="HKD001" Date="2022-05-19" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000140" HotelCode="FKO001" Date="2022-05-20" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000141" HotelCode="HKD001" Date="2022-05-21" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000142" HotelCode="FKO001" Date="2022-05-22" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000143" HotelCode="HKD001" Date="2022-05-23" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000144" HotelCode="FKO001" Date="2022-05-24" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000145" HotelCode="HKD001" Date="2022-05-25" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000146" HotelCode="FKO001" Date="2022-05-26" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000147" HotelCode="HKD001" Date="2022-05-27" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000148" HotelCode="FKO001" Date="2022-05-28" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000149" HotelCode="HKD001" Date="2022-05-29" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000150" HotelCode="FKO001" Date="2022-05-30" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000151" HotelCode="HKD001" Date="2022-05-31" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000152" HotelCode="FKO001" Date="2022-06-01" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000153" HotelCode="HKD001" Date="2022-06-02" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000154" HotelCode="FKO001" Date="2022-06-03" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000155" HotelCode="HKD001" Date="2022-06-04" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000156" HotelCode="FKO001" Date="2022-06-05" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000157" HotelCode="HKD001" Date="2022-06-06" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000158" HotelCode="FKO001" Date="2022-06-07" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000159" HotelCode="HKD001" Date="2022-06-08" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000160" HotelCode="FKO001" Date="2022-06-09" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000161" HotelCode="HKD001" Date="2022-06-10" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000162" HotelCode="FKO001" Date="2022-06-11" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000163" HotelCode="HKD001" Date="2022-06-12" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000164" HotelCode="FKO001" Date="2022-06-13" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000165" HotelCode="HKD001" Date="2022-06-14" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000166" HotelCode="FKO001" Date="2022-06-15" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000167" HotelCode="HKD001" Date="2022-06-16" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000168" HotelCode="FKO001" Date="2022-06-17" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000169" HotelCode="HKD001" Date="2022-06-18" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000170" HotelCode="FKO001" Date="2022-06-19" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000171" HotelCode="HKD001" Date="2022-06-20" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000172" HotelCode="FKO001" Date="2022-06-21" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000173" HotelCode="HKD001" Date="2022-06-22" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000174" HotelCode="FKO001" Date="2022-06-23" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000175" HotelCode="HKD001" Date="2022-06-24" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000176" HotelCode="FKO001" Date="2022-06-25" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000177" HotelCode="HKD001" Date="2022-06-26" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000178" HotelCode="FKO001" Date="2022-06-27" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000179" HotelCode="HKD001" Date="2022-06-28" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000180" HotelCode="FKO001" Date="2022-06-29" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000181" HotelCode="HKD001" Date="2022-06-30" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000182" HotelCode="FKO001" Date="2022-07-01" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000183" HotelCode="HKD001" Date="2022-07-02" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000184" HotelCode="FKO001" Date="2022-07-03" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000185" HotelCode="FKO001" Date="2022-07-04" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000186" HotelCode="FKO001" Date="2022-07-05" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000187" HotelCode="FKO001" Date="2022-07-06" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000188" HotelCode="FKO001" Date="2022-07-07" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000189" HotelCode="FKO001" Date="2022-07-08" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000190" HotelCode="FKO001" Date="2022-07-09" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000191" HotelCode="FKO001" Date="2022-07-10" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000192" HotelCode="FKO001" Date="2022-07-11" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000193" HotelCode="FKO001" Date="2022-07-12" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000194" HotelCode="FKO001" Date="2022-07-13" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000195" HotelCode="FKO001" Date="2022-07-14" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000196" HotelCode="FKO001" Date="2022-07-15" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000197" HotelCode="FKO001" Date="2022-07-16" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000198" HotelCode="FKO001" Date="2022-07-17" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000199" HotelCode="FKO001" Date="2022-07-18" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000200" HotelCode="FKO001" Date="2022-07-19" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000201" HotelCode="HKD001" Date="2022-07-20" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000202" HotelCode="FKO001" Date="2022-07-21" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000203" HotelCode="HKD001" Date="2022-07-22" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000204" HotelCode="FKO001" Date="2022-07-23" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000205" HotelCode="HKD001" Date="2022-07-24" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000206" HotelCode="FKO001" Date="2022-07-25" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000207" HotelCode="HKD001" Date="2022-07-26" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000208" HotelCode="FKO001" Date="2022-07-27" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000209" HotelCode="HKD001" Date="2022-07-28" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000210" HotelCode="FKO001" Date="2022-07-29" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000211" HotelCode="HKD001" Date="2022-07-30" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000212" HotelCode="FKO001" Date="2022-07-31" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000213" HotelCode="HKD001" Date="2022-08-01" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000214" HotelCode="FKO001" Date="2022-08-02" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000215" HotelCode="HKD001" Date="2022-08-03" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000216" HotelCode="FKO001" Date="2022-08-04" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000217" HotelCode="HKD001" Date="2022-08-05" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000218" HotelCode="FKO001" Date="2022-08-06" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000219" HotelCode="HKD001" Date="2022-08-07" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000220" HotelCode="FKO001" Date="2022-08-08" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000221" HotelCode="HKD001" Date="2022-08-09" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000222" HotelCode="FKO001" Date="2022-08-10" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000223" HotelCode="HKD001" Date="2022-08-11" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000224" HotelCode="FKO001" Date="2022-08-12" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000225" HotelCode="HKD001" Date="2022-08-13" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000226" HotelCode="FKO001" Date="2022-08-14" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000227" HotelCode="HKD001" Date="2022-08-15" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000228" HotelCode="FKO001" Date="2022-08-16" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000229" HotelCode="HKD001" Date="2022-08-17" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000230" HotelCode="FKO001" Date="2022-08-18" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000231" HotelCode="HKD001" Date="2022-08-19" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000232" HotelCode="FKO001" Date="2022-08-20" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000233" HotelCode="HKD001" Date="2022-08-21" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000234" HotelCode="FKO001" Date="2022-08-22" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000235" HotelCode="HKD001" Date="2022-08-23" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000236" HotelCode="FKO001" Date="2022-08-24" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000237" HotelCode="HKD001" Date="2022-08-25" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000238" HotelCode="FKO001" Date="2022-08-26" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000239" HotelCode="HKD001" Date="2022-08-27" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000240" HotelCode="FKO001" Date="2022-08-28" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000241" HotelCode="HKD001" Date="2022-08-29" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000242" HotelCode="FKO001" Date="2022-08-30" Price="15000" Stock="15"/>
+	<Hotel ItemCode="HTL000243" HotelCode="HKD001" Date="2022-08-31" Price="15000" Stock="15"/>
+</dataset>

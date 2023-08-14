@@ -1,0 +1,105 @@
+<!--
+	注文確認画面（ID:）
+	All Right Reserved, Copyright(c) Fujitsu Learning Media Limited
+	version 1.0
+-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}">
+<LINK rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+<title>販売管理システム</title>
+</head>
+
+<body>
+<!-- ヘッダー -->
+<div th:insert="header::headermenu"></div>
+
+<!-- メインコンテンツ -->
+<!-- タイトル -->
+<div class="title">
+	<h2>注文確認</h2>
+</div>
+
+<div class="right">
+	<form  method="POST" name="inputFom" th:object="${orderForm}">
+		<div align=center>
+		<div class="list">
+
+			<table border=1  style="margin: auto;">
+			<caption style="caption-side:top;padding:0;">購入商品情報</caption>
+				<tr>
+					<th width="80" class="colume">商品コード</th>
+					<th width="200" class="colume">商品名</th>
+					<th width="70" class="colume">料金</th>
+					<th width="40" class="colume">数量</th>
+					<th width="90" class="colume">小計</th>
+				</tr>
+				<th:block th:object="${item}" th:each="item : ${shoppingCart.itemList}">
+				<tr>
+					<td align="left" th:text="*{itemCode}">商品コード</td>
+					<td align="left" th:text="*{itemName}">商品名</td>
+					<td align="right" th:text="${#numbers.formatInteger(item.price, 1, 'COMMA')}">料金</td>
+					<td align="center" th:text="*{quantity}">数量</td>
+					<td  align="right" th:text="${#numbers.formatInteger(item.total, 1, 'COMMA')}">小計</td>
+				</tr>
+				</th:block>
+				<tr>
+					<td width="440" colspan="4" align="center" class=colume>合計</td>
+					<td align="right" th:text="${#numbers.formatInteger(shoppingCart.total, 1, 'COMMA')}">合計</td>
+				</tr>
+			</table>
+		</div>
+
+			<br>
+
+			<div class="list" >
+
+				<table border=1  style="margin: auto;">
+					<caption style="caption-side:top;padding:0;">メンバー情報</caption>
+					<tr>
+						<td width="100" class="colume">メンバー名</td>
+						<td width="400" colspan="2" th:text="${member.memberName}"></td>
+					</tr>
+					<tr>
+						<td class="colume">送付先</td>
+						<td colspan="2"  th:text="${member.address}">
+
+						</td>
+					</tr>
+					<tr>
+						<td class="colume">決済方法</td>
+						<td colspan="2"  >
+							<select name="payment" th:field="*{payment}">
+								<option value="1">代金引き</option>
+								<option value="2">コンビニ決済</option>
+							</select>
+
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<br>
+
+			<!-- ボタン -->
+			<button th:formaction="@{/orderRegist/execute}" class="btn btn-secondary">購入確定</button>
+		</div>
+
+		<br>
+
+			<!-- メッセージ -->
+			<div id="message" align="center" style="color:#FF0000">
+			</div>
+
+	</form>
+</div>
+
+<!-- フッター -->
+<div th:insert="footer::footer"></div>
+<script src="/js/jquery-3.6.0.min.js" ></script>
+<script src="/js/bootstrap.bundle.min.js" ></script>
+
+</body>
+</html>

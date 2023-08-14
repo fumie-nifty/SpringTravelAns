@@ -1,0 +1,56 @@
+<!--
+	トップメニュー（顧客）画面（ID:）
+	All Right Reserved, Copyright(c) Fujitsu Learning Media Limited
+	version 1.0
+-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}">
+<LINK rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+<title>販売管理システム</title>
+</head>
+
+<body>
+<!-- ヘッダー -->
+<div th:insert="header::headermenu"></div>
+
+<!-- メインコンテンツ -->
+<!-- タイトル -->
+<div class="title" style="background-color: #ffffff">
+	<h2>トップメニュー</h2>
+</div>
+<div class="right">
+	<div align="center">
+		<!-- ボタン -->
+		<form method="get">
+		<table style="padding: 10px;margin: 30px">
+			<tr>
+				<td width=300 height=250  align="center" style="padding: 20px;border:2px #808080 solid;background-color:#FFDAB9;">
+					<b>商品購入</b>
+					<p><button  class="btn btn-light btn-block">パッケージツアー購入</button> </p>
+					<p><button  class="btn btn-light btn-block">フライト購入</button></p>
+					<p><button th:formaction="@{/hotelSearch/input}" class="btn btn-light btn-block">ホテル購入</button></p>
+					<p><button th:formaction="@{/orderRegist/goShoppingCart}" class="btn btn-light btn-block">ショッピングカート</button></p>
+					<p><button  class="btn btn-light btn-block">注文取消</button></p>
+				<p/>
+				</td>
+				<td width=40 align="left"></td>
+				<td width=300 align="center" style="padding: 20px;border:2px #808080 solid;background-color:#FFDAB9;">
+					<b>メンバー情報管理</b>
+					<p><button  class="btn btn-light btn-block" >メンバー情報変更</button></p>
+				</td>
+			</tr>
+		</table>
+		</form>
+	</div>
+</div>
+
+<!-- フッター -->
+<div th:insert="footer::footer"></div>
+
+<script src="/js/jquery-3.6.0.min.js" ></script>
+<script src="/js/bootstrap.bundle.min.js" ></script>
+</body>
+</html>

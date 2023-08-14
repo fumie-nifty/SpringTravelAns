@@ -1,0 +1,80 @@
+<!--
+	パッケージツアー商品検索画面（ID:）
+	All Right Reserved, Copyright(c) Fujitsu Learning Media Limited
+	version 1.0
+-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK rel="stylesheet" type="text/css" href="Style.css">
+<title>販売管理システム</title>
+</head>
+
+<body>
+
+<jsp:include page="/head.jsp" flush="true"/>
+
+<div class="title">
+	<h2>パッケージツアー商品検索</h2>
+</div>
+
+<div class="right">
+	<div align="center">
+		<form action="/tourSystemans/tsys" method="POST" name="inputFom">
+			<!-- 次画面ID用フィールド -->
+			<input type="hidden" name="BUTTON_ID" value="">
+
+			<br>
+
+			<table  border=1 cellspacing="0" cellpadding="4px" align="center">
+				<tr>
+					<td width=140 class="colume">出発年月</td>
+					<td width=370><input type="text" name="DATE" value="${requestScope.date}" maxlength="7" style="width: 160px"></td>
+				</tr>
+				<tr>
+					<td width=140 class="colume">地区名</td>
+					<td width=370>
+						<select name="DESTINATION_CODE" style="width: 160px">
+								<option  value="01">北海道</option>
+								<option  value="02">東北</option>
+								<option  value="03">関東</option>
+								<option  value="04">中部</option>
+								<option  value="05">近畿</option>
+								<option  value="06">四国</option>
+								<option  value="07">九州</option>
+								<option  value="08">沖縄</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+
+			<br>
+
+			<!-- ボタン -->
+			<input type="button" name="cmdSubmit" value="検索する" class="cmdbutton"
+						onClick="this.form.BUTTON_ID.value='0601_01_01'; this.form.submit()">
+			<br><br>
+
+			<!-- メッセージ -->
+			<div id="message" align="center" style="color:#FF0000">
+				<c:out value="${requestScope.message }" escapeXml="false"/>
+			</div>
+
+			<br><br>
+
+			<div align="right">
+				<!-- ボタン -->
+				<c:if test="${sessionScope.member.role=='Employee' }">
+				<input type="button" name="cmdSubmit" value="商品販売メニュー" class="cmdbutton3"
+						onClick="this.form.BUTTON_ID.value='M02_02'; this.form.submit()">
+				</c:if>
+			</div>
+		</form>
+	</div>
+</div>
+
+<jsp:include page="/foot.jsp" flush="true"/>
+
+</body>
+</html>

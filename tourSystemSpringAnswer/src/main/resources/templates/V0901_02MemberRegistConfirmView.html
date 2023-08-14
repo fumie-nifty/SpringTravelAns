@@ -1,0 +1,93 @@
+<!--
+	メンバー登録確認画面（ID:）
+	All Right Reserved, Copyright(c) Fujitsu Learning Media Limited
+	version 1.0
+-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK rel="stylesheet" type="text/css" href="Style.css">
+<title>販売管理システム</title>
+</head>
+
+<body>
+
+<jsp:include page="/head.jsp" flush="true"/>
+
+<div class="title">
+	<h2>メンバー登録確認</h2>
+</div>
+
+<div class="right">
+	<div align="center">
+		<form action="/tourSystemans/tsys" method="POST" name="inFom">
+			<!-- 次画面ID用フィールド -->
+			<input type="hidden" name="BUTTON_ID" value="">
+
+			<table  border=1 cellspacing="0" cellpadding="4px" align="center">
+				<tr>
+					<td width="130px" class="colume">メンバーコード</td>
+					<td><c:out value="${requestScope.member.memberCode}"/></td>
+				</tr>
+				<tr>
+					<td class="colume">権限</td>
+					<td><c:out value="${requestScope.member.role}"/></td>
+				</tr>
+				<tr>
+					<td class="colume">メンバー名</td>
+					<td><c:out value="${requestScope.member.memberName}"/></td>
+				</tr>
+				<tr>
+					<td class="colume">郵便番号</td>
+					<td><c:out value="${requestScope.member.zipCode}"/></td>
+				</tr>
+				<tr>
+					<td class="colume">都道府県</td>
+					<td><c:out value="${requestScope.member.prefecture}"/></td>
+				</tr>
+				<tr>
+					<td class="colume">住所</td>
+					<td><c:out value="${requestScope.member.address}"/></td>
+				</tr>
+				<tr>
+					<td class="colume">電話番号</td>
+					<td><c:out value="${requestScope.member.tel}"/></td>
+				</tr>
+				<tr>
+					<td class="colume">メールアドレス</td>
+					<td><c:out value="${requestScope.member.mail}"/></td>
+				</tr>
+			</table>
+
+			<br>
+
+			<!-- ボタン -->
+			<input type="button" name="cmdSubmit" value="確定する" class="cmdbutton"
+						onClick="this.form.BUTTON_ID.value='0901_02_01'; this.form.submit()">
+			<input type="button" name="cmdSubmit" value="前画面に戻る" class="cmdbutton"
+						onClick="this.form.BUTTON_ID.value='0901_02_02';this.form.submit()">
+
+			<br><br>
+
+			<!-- メッセージ -->
+			<div id="message" align="center" style="color:#FF0000">
+				<c:out value="${requestScope.message }" escapeXml="false"/>
+			</div>
+
+			<div align="right">
+				<!-- ボタン -->
+				<c:if test="${sessionScope.member.role=='Employee' }">
+					<input type="button" name="cmdSubmit" value="メンバー管理メニュー" class="cmdbutton3"
+							onClick="this.form.BUTTON_ID.value='M02_01'; this.form.submit()">
+				</c:if>
+			</div>
+
+		</form>
+	</div>
+</div>
+
+<jsp:include page="/foot.jsp" flush="true"/>
+
+</body>
+</html>

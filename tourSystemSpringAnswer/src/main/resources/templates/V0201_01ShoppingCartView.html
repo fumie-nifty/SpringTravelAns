@@ -1,0 +1,70 @@
+<!--
+	ショッピングカート画面（ID:）
+	All Right Reserved, Copyright(c) Fujitsu Learning Media Limited
+	version 1.0
+-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}">
+<LINK rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+<title>販売管理システム</title>
+</head>
+
+<body>
+<!-- ヘッダー -->
+<div th:insert="header::headermenu"></div>
+
+<!-- メインコンテンツ -->
+<!-- タイトル -->
+<div class="title">
+	<h2>ショッピングカート</h2>
+</div>
+
+<div class="right">
+	<form  method="POST" name="inputFom">
+		<div class="list">
+			<table border=1 class="list"  style="margin: auto;">
+				<tr>
+					<th width="80" class="colume">商品コード</th>
+					<th width="170" class="colume">商品名</th>
+					<th width="70" class="colume">料金</th>
+					<th width="40" class="colume">数量</th>
+					<th width="90" class="colume">小計</th>
+				</tr>
+				<th:block th:object="${item}" th:each="item : ${shoppingCart.itemList}">
+				<tr>
+					<td align="left" th:text="*{itemCode}">商品コード</td>
+					<td align="left" th:text="*{itemName}">商品名</td>
+					<td align="right" th:text="${#numbers.formatInteger(item.price, 1, 'COMMA')}">料金</td>
+					<td th:text="*{quantity}">数量</td>
+					<td  align="right" th:text="${#numbers.formatInteger(item.total, 1, 'COMMA')}">小計</td>
+				</tr>
+				</th:block>
+				<tr>
+					<td width="440" colspan="4" align="center" class=colume  >合計</td>
+					<td align="right" th:text="${#numbers.formatInteger(shoppingCart.total, 1, 'COMMA')}">合計</td>
+				</tr>
+			</table>
+		</div>
+
+			<div align="center">
+				<br>
+			<button th:formaction="@{/orderRegist/confirm}" class="btn btn-secondary">購　入</button>
+				<br>
+			</div>
+
+		<!-- メッセージ -->
+		<div id="message" align="center" style="color:#FF0000">
+		</div>
+
+	</form>
+</div>
+
+<!-- フッター -->
+<div th:insert="footer::footer"></div>
+<script src="/js/jquery-3.6.0.min.js" ></script>
+<script src="/js/bootstrap.bundle.min.js" ></script>
+</body>
+</html>

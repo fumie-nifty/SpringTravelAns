@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- EmployeeMapper.xml -->
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited -->
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tsysSpring.sales.mapper.OrderMapper">
+
+	<!-- 注文情報をORDERテーブルに追加する -->
+	<insert id="insertOrder">
+		INSERT INTO
+		 OrderMaster(
+		 OrderDate,
+		 OrderTotal,
+		 MemberCode,
+		 Payment)
+	 VALUES(
+		 #{orderDate},
+		 #{orderTotal},
+		 #{memberCode},
+		 #{payment}
+	 );
+	</insert>
+
+	<!-- 注文明細情報をORDERDETAILテーブルに追加する -->
+	<insert id="insertOrderDetail">
+		INSERT INTO
+			OrderDetail
+		VALUES (
+			#{orderNo},
+			#{itemCode},
+			#{itemName},
+			#{price},
+			#{quantity}
+		);
+	</insert>
+
+	<!-- 最後に使用された注文番号を取得する -->
+	<select id="lastInsertOrderNo" resultType="java.lang.Integer">
+		SELECT LAST_INSERT_ID();
+	</select>
+
+</mapper>

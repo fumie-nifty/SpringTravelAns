@@ -1,0 +1,93 @@
+<!--
+	注文取消画面（ID:）
+	All Right Reserved, Copyright(c) Fujitsu Learning Media Limited
+	version 1.0
+-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK rel="stylesheet" type="text/css" href="Style.css">
+<title>販売管理システム</title>
+</head>
+
+<body>
+
+<jsp:include page="/head.jsp" flush="true"/>
+
+<div class="title">
+	<h2>注文取消</h2>
+</div>
+
+<div class="right">
+	<form action="/tourSystemans/tsys" method="POST" name="inputFom">
+		<!-- 次画面ID用フィールド -->
+		<input type="hidden" name="BUTTON_ID" value="">
+		<div align=center>
+				<table border=1 cellspacing="0" cellpadding="2px" class="list"  width="620">
+					<tr>
+						<td width="110" class="colume">メンバーコード</td>
+						<td width="200"><c:out value="${sessionScope.buyMember.memberCode }"/></td>
+						<td width="110" class="colume">メンバー名</td>
+						<td width="200"><c:out value="${sessionScope.buyMember.memberName }"/></td>
+					</tr>
+					<tr>
+						<td width="110" class="colume">注文番号</td>
+						<td width="200"><c:out value="${sessionScope.order.orderNo }"/></td>
+						<td width="110" class="colume">注文日</td>
+						<td width="200"><c:out value="${sessionScope.order.orderDate}"/></td>
+					</tr>
+				</table>
+			<br>
+				<table border=1 cellspacing="0" cellpadding="2px" class="list"  width="620">
+					<tr>
+						<th width="90" class="colume">商品コード</th>
+						<th width="230" class="colume">商品名</th>
+						<th width="70" class="colume">料金</th>
+						<th width="50" class="colume">数量</th>
+						<th width="90" class="colume">小計</th>
+					</tr>
+				<c:forEach var="orderDetail"
+					items="${sessionScope.orderDetailList}" varStatus="status">
+					<tr>
+						<td>${orderDetail.itemCode}</td>
+						<td>${orderDetail.itemName}</td>
+						<td align="right">${orderDetail.price}</td>
+						<td align="right">${orderDetail.quantity}</td>
+						<td align="right">${orderDetail.subTotal}</td>
+					</tr>
+				</c:forEach>
+					<tr>
+						<td width="440" colspan="4"align="center" class="colume">合計</td>
+						<td width="90" align="right"><c:out value="${sessionScope.order.orderTotal }"/></td>
+					</tr>
+				</table>
+			<br>
+			<!-- ボタン -->
+			<input type="button" name="smdSubmit" value="注文取消する" class="cmdbutton"
+						onClick="this.form.BUTTON_ID.value='0202_02_01';this.form.submit()">
+
+		</div>
+
+		<br>
+
+		<!-- メッセージ -->
+		<div id="message" align="center" style="color:#FF0000">
+			<c:out value="${requestScope.message }" escapeXml="false"/>
+		</div>
+
+		<div align="right">
+			<!-- ボタン -->
+			<c:if test="${sessionScope.member.role=='Employee' }">
+				<input type="button" name="cmdSubmit" value="商品販売メニュー" class="cmdbutton3"
+						onClick="this.form.BUTTON_ID.value='M02_02'; this.form.submit()">
+			</c:if>
+		</div>
+
+	</form>
+</div>
+
+<jsp:include page="/foot.jsp" flush="true"/>
+
+</body>
+</html>

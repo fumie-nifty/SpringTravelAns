@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<body>
+<div id="headerArea" th:fragment="headermenu">
+<!-- ナビゲーションメニュー -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" th:href="@{/}">FLM Tour</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          商品選択
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">パッケージ・ツアー</a>
+          <a class="dropdown-item" href="#">フライト</a>
+          <a class="dropdown-item" th:href="@{/hotelSearch/input}">ホテル</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" th:href="@{/orderRegist/goShoppingCart}">ショッピングカート</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">会員情報</a>
+     </li>
+     </ul>
+      <span class="navbar-text" th:if="${authMember.memberName!=null}">
+      ユーザー名：<span th:text="${authMember.memberName}">memberName</span>
+    </span>
+    <form method="post" >
+  			<!-- ログイン後の遷移先ページurl -->
+		 <input type="hidden" name="pageUrl"  th:value="${pageUrl}">
+      　<button 	class="btn btn-outline-secondary my-2 my-sm-0"
+      					  th:formaction="@{/logout}"
+      					  th:if="${authMember.memberName!=null}">ログアウト</button>
+
+      　<button 	class="btn btn-outline-secondary my-2 my-sm-0"
+      					  th:formaction="@{/goLogin}"
+      					  th:if="${authMember.memberName==null}">ログイン</button>
+      </form>
+   </div>
+</nav>
+</div>
+</body>
+</html>

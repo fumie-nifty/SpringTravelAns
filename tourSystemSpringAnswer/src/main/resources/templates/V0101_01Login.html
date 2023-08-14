@@ -1,0 +1,70 @@
+<!--
+	ログイン画面（ID:）
+	All Right Reserved, Copyright(c) Fujitsu Learning Media Limited
+	version 1.0
+-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}">
+<LINK rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+<title>販売管理システム</title>
+</head>
+
+<body>
+<!-- ヘッダー -->
+<div th:insert="header::headermenu"></div>
+
+<!-- メインコンテンツ -->
+<!-- タイトル -->
+<div class="title">
+	<h2>ログイン</h2>
+</div>
+
+<div class="right" >
+	<p style="text-align:center;">メンバーコードとパスワードを入力してログインしてください。</p>
+	<div align="center" style="MARGIN-LEFT: 80px; MARGIN-RIGHT: 80px;" >
+		<form  method="POST" name="loginFom" th:object="${loginForm}">
+			<!-- ログイン後の遷移先ページ -->
+			<input type="hidden" name="pageUrl" th:filed="*{pageUrl}" th:value="${loginForm.pageUrl}">
+			<!-- メンバーコード入力 -->
+			<div class="form-group row">
+			    <label for="inputMemberCode" class="col-sm-3 col-form-label">メンバーコード</label>
+			    <div class="col-sm-9">
+			      <input type="text" class="form-control" id="inputMemberCode" th:field="*{memberCode}" >
+			      <!-- 検証エラーメッセージ -->
+			      <div th:if="${#fields.hasErrors('memberCode')}" class="errorMessage" style="text-align: left;"
+								th:errors="*{memberCode}">validation massage</div>
+			    </div>
+			</div>
+			<!-- パスワード入力 -->
+			<div class="form-group row">
+				<label for="inputPassword" class="col-sm-3 col-form-label">パスワード</label>
+				<div class="col-sm-9">
+				<input type="password" class="form-control" id="inputPassword" th:field="*{password}">
+			     <!-- 検証エラーメッセージ -->
+				<div th:if="${#fields.hasErrors('password')}" class="errorMessage" style="text-align: left;"
+								th:errors="*{password}">validation massage</div>
+			    </div>
+			</div>
+		<!-- メッセージ（業務処理） -->
+		<div class="errorMessage" th:text="${message}"  style="text-align: center; color: red">
+			エラーメッセージ
+		</div>
+			<br>
+			<!-- ボタン -->
+			<input type="reset" name="cmdClear" value="クリア" class="btn btn-secondary">
+			<button  class="btn btn-secondary" th:formaction="@{/login}">ログイン</button>
+			<br><br>
+			<a href="/tourSystemans/tsys?BUTTON_ID=0101_01_02">新規会員登録</a>
+		</form>
+	</div>
+</div>
+<!-- フッター -->
+<div th:insert="footer::footer"></div>
+<script src="/js/jquery-3.6.0.min.js" ></script>
+<script src="/js/bootstrap.bundle.min.js" ></script>
+
+</body>
+</html>

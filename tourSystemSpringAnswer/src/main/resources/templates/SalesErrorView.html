@@ -1,0 +1,32 @@
+﻿<!-- All Rights Reserved ,Copyright(c) Fujitsu Learning Media Limited -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<LINK rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<LINK rel="stylesheet" type="text/css" href="css/Style.css">
+<title>販売管理システム</title>
+</head>
+
+<body>
+  <!-- 見出し -->
+  <div align="center">
+    <h2>システムエラー</h2><br>
+  </div>
+
+  <div align="center" style="color: red;">
+    <p>
+      <c:out value="${requestScope.message}" /><br><br><br>
+    </p>
+  </div>
+
+  <!-- フォーム -->
+  <form action="./tsys" method="POST">
+  <!-- 次画面ID用フィールド -->
+  <input type="hidden" name="BUTTON_ID" value="">
+    <div align="center">
+    	<input type="submit" value="ログイン画面へ" style="width:100px">
+    </div>
+  </form>
+</body>
+</html>

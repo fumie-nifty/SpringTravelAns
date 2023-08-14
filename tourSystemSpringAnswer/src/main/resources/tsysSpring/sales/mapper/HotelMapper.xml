@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- EmployeeMapper.xml -->
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited -->
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tsysSpring.sales.mapper.HotelMapper">
+
+	<!-- ホテル情報を1件検索する -->
+	<select id="findHotel" resultType="tsysSpring.sales.entity.Hotel">
+		SELECT
+				ItemCode,
+				HotelMaster.Name as itemName,
+				Price,
+				Stock,
+				Hotel.HotelCode,
+				DATE_FORMAT(Date,'%Y/%m/%d') as Date,
+				HotelMaster.CityCode,
+				City.Name as cityName,
+				Grade,
+				BasicPrice
+		FROM
+				Hotel,Hotelmaster,City
+		WHERE
+				Hotelmaster.CityCode = City.CityCode
+		AND
+				Hotel.HotelCode = Hotelmaster.HotelCode
+		AND
+				ItemCode=#{itemCode};
+	</select>
+
+	<!-- ホテル情報リストを検索する -->
+	<select id="findHotelList" resultType="tsysSpring.sales.entity.Hotel">
+				SELECT
+					ItemCode,
+					HotelMaster.Name as itemName,
+					Price,
+					Stock,
+					Hotel.HotelCode,
+					DATE_FORMAT(Date,'%Y/%m/%d') as Date,
+					HotelMaster.CityCode,
+					City.Name as cityName,
+					Grade,
+					BasicPrice
+				FROM
+					Hotel,Hotelmaster,City
+				WHERE
+					Hotelmaster.CityCode = City.CityCode
+				AND
+					Hotel.HotelCode = HotelMaster.HotelCode
+				AND
+					Hotelmaster.CityCode=#{cityCode}
+				AND
+					DATE_FORMAT(Date,'%Y/%m')=#{date};
+	</select>
+
+	<!-- 数量を在庫からマイナスする -->
+	<update id="updateStockByQuantity">
+				UPDATE
+					Hotel
+				SET
+					Stock=Stock-#{quantity}
+				WHERE
+					ItemCode=#{itemCode};
+	</update>
+
+</mapper>

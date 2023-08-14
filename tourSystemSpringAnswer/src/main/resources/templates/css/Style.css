@@ -1,0 +1,78 @@
+@CHARSET "UTF-8";
+
+/*全体共通　要素ごとのスタイル定義*/
+body {
+	margin-left: 100px;
+	margin-right: 100px;
+	padding: 0px;
+	font-family: "Hiragino Kaku Gothic ProN", "meiryo";
+	font-size: 10pt;
+	text-align: center;
+}
+
+h2{
+		font-size: 14pt;
+		background-color:#FAEBD7;
+		padding: 5px;
+}
+
+input {
+	font-size: 10pt;
+}
+
+table th{
+	background-color:#FAEBD7;
+	padding: 5px;
+}
+
+table .detail td{
+	padding: 15px;
+}
+
+.colume{
+	background-color:#FAEBD7;
+	font-weight:bold;
+}
+
+div.top {
+	BORDER-BOTTOM: 0.2mm solid; MARGIN-TOP: 20px; MARGIN-LEFT: 50px; MARGIN-RIGHT: 50px
+}
+div.bottom {
+	MARGIN-TOP: 10px; MARGIN-LEFT: 50px; BORDER-TOP: 0.2mm solid; MARGIN-RIGHT: 50px;
+	border-color:#A9A9A9;
+	color:#A9A9A9;
+}
+div.left {
+	MARGIN-TOP: 20px; WIDTH: 100px; FLOAT: left; MARGIN-LEFT: 50px
+}
+div.right {
+	MARGIN-TOP: 20px; MARGIN-LEFT: 50px; MARGIN-RIGHT: 50px
+}
+div.title {
+	TEXT-ALIGN: center; MARGIN-TOP: 20px; MARGIN-LEFT: 50px; MARGIN-RIGHT: 50px
+}
+div.input {
+	BORDER-BOTTOM: #808080 2px solid; BORDER-LEFT: #808080 2px solid; PADDING-BOTTOM: 20px; PADDING-LEFT: 40px; WIDTH: 600px; PADDING-RIGHT: 40px; BORDER-TOP: #808080 2px solid; BORDER-RIGHT: #808080 2px solid; PADDING-TOP: 20px
+}
+div.list {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+div.list2 {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; widht: 630; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+
+.btn-flat-simple {
+  appearance: none;
+  border:0;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 5px 16px;
+  color: #00bcd4;
+  background: #ECECEC;
+  font-size:16px;
+}
+
+.btn-flat-simple:hover {
+  background: #00bcd4;
+  color: white;
+}

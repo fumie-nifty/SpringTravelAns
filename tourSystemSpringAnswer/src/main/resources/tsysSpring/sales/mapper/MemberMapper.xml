@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- EmployeeMapper.xml -->
+<!-- All Rights Reserved, Copyright(c) Fujitsu Learning Media Limited -->
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tsysSpring.sales.mapper.MemberMapper">
+
+	<!-- メンバーを1件検索する -->
+	<select id="findMemberPassword" resultType="tsysSpring.sales.entity.Member">
+		SELECT
+			MemberCode, Role,Name as memberName, Password, Mail, ZipCode, Prefecture, Address, Tel
+		FROM
+			member
+		WHERE
+			MemberCode = #{memberCode} and Password = #{password};
+	</select>
+
+	<!-- メンバーを1件検索する -->
+	<select id="findMember" resultType="tsysSpring.sales.entity.Member">
+		SELECT
+			MemberCode, Role,Name as memberName, Password, Mail, ZipCode, Prefecture, Address, Tel
+		FROM
+			member
+		WHERE
+			MemberCode = #{memberCode};
+	</select>
+
+	<!--メンバーを追加する -->
+	<insert id="insertMember">
+		INSERT INTO
+			Member
+		VALUES(
+			#{memberCode},
+			#{memberName},
+			#{password},
+			#{role},
+			#{mail},
+			#{zipCode},
+			#{prefecture},
+			#{address},
+			#{tel}
+		);
+	</insert>
+
+	<!-- メンバーを削除する -->
+	<delete id="deleteMember">
+		DELETE FROM
+			Member
+		WHERE
+			MemberCode = #{memberCode};
+	</delete>
+
+	<!-- メンバーを更新する -->
+	<update id="updateMember">
+		UPDATE
+			Member
+		SET
+			Name = #{memberName},
+			Password = #{password},
+			Role = #{role},
+			Mail = #{mail},
+			ZipCode = #{zipCode},
+			Prefecture = #{prefecture},
+			Address = #{address},
+			Tel = #{tel}
+		WHERE
+			MemberCode = #{memberCode};
+	</update>
+
+	<!-- メンバーを全件検索する -->
+	<select id="findMemberList" resultType="tsysSpring.sales.entity.Member">
+		SELECT
+			MemberCode, Role,Name as memberName,
+			Password, Mail, ZipCode, Prefecture, Address, Tel
+		FROM
+			member
+	</select>
+
+</mapper>
